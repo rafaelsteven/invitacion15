@@ -1,0 +1,60 @@
+.app {
+  width: 100%;
+  min-height: 100svh;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  .app {
+    background: linear-gradient(160deg, #150624 0%, #2c0e50 45%, #1b0838 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* Loading */
+.app-loading {
+  min-height: 100svh;
+  background: linear-gradient(160deg, #150624 0%, #2c0e50 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-loading-spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid rgba(201, 160, 80, 0.2);
+  border-top-color: #c9a050;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Error / no invite */
+.app-error {
+  min-height: 100svh;
+  background: linear-gradient(160deg, #150624 0%, #2c0e50 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.app-error-icon {
+  font-size: 3rem;
+  color: #c9a050;
+  margin: 0 0 16px;
+}
+.app-error-text {
+  color: #e8d0ff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.app-error-sub {
+  color: rgba(201, 160, 80, 0.6);
+  font-size: 0.88rem;
+  margin: 0;
+}

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color system */
+  --plum:        #3b1260;
+  --violet:      #6b28a8;
+  --lavender:    #9858c8;
+  --lilac:       #c090e0;
+  --blush:       #e8d0f8;
+  --petal:       #f4eaff;
+  --pearl:       #faf6ff;
+  --gold:        #c9a050;
+  --gold-light:  #e8cc80;
+  --ink:         #2a1040;
+  --text:        #4a2070;
+  --muted:       #7a50a0;
+
+  /* Typography scale */
+  --script:      'Great Vibes', cursive;
+  --display:     'Playfair Display', Georgia, serif;
+  --serif:       'Cormorant Garamond', Georgia, serif;
+  --caps:        'Cinzel', Georgia, serif;
+
+  /* Fluid type */
+  --t-xs:   0.72rem;
+  --t-sm:   0.85rem;
+  --t-base: 1rem;
+  --t-md:   1.1rem;
+  --t-lg:   1.3rem;
+  --t-xl:   1.6rem;
+  --t-2xl:  2rem;
+  --t-3xl:  2.6rem;
+  --t-script-sm:  2.2rem;
+  --t-script-md:  3rem;
+  --t-script-lg:  clamp(3.2rem, 13vw, 5rem);
+  --t-script-xl:  clamp(4rem, 18vw, 6.5rem);
+  --t-num:        clamp(4rem, 16vw, 5.5rem);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: var(--serif);
+  font-weight: 400;
+  background: var(--pearl);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
