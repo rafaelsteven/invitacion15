@@ -3,6 +3,8 @@ import ConfirmModal from './ConfirmModal'
 import { CONFIG } from '../config'
 import './Invitation.css'
 
+const base = import.meta.env.BASE_URL
+
 const LEAF_COLORS = ['#c9a050', '#8a5c2a', '#5c8a30', '#c06030', '#a0481a']
 const LEAF_PATHS = [
   'M10,1 C14,4 16,9 14,15 C12,20 10,21 10,21 C10,21 6,20 5,15 C4,9 6,4 10,1Z',
@@ -157,7 +159,7 @@ export default function Invitation({ family }) {
 
         {/* Rapunzel figure left */}
         <div className="princess-left">
-          <img src="img/princesa1.png" alt="Princesa" className="princess-img" />
+          <img src={base + 'princesa1.png'} alt="Princesa" className="princess-img" />
         </div>
 
         {/* Golden branch right */}
@@ -224,7 +226,7 @@ export default function Invitation({ family }) {
           </div>
 
           <div className="photo-circle">
-            <img src="img/foto_cumple.jpg" alt={CONFIG.quinceañera} />
+            <img src={base + 'foto_cumple.jpg'} alt={CONFIG.quinceañera} />
           </div>
         </div>
 
@@ -301,14 +303,12 @@ export default function Invitation({ family }) {
             <TieSVG />
             <DressSVG />
           </div>
-          <p className="dresscode-title script">Sport elegante</p>
-          <p className="dresscode-note">
-            Amablemente, el color lila únicamente<br />para la quinceañera.
-          </p>
+          <p className="dresscode-title script">{CONFIG.dressCode}</p>
+          <p className="dresscode-note">{CONFIG.dressCodeNota}</p>
         </div>
 
         <div className="princess-right-small">
-          <img src="img/princesa1.png" alt="Princesa" className="princess-img princess-img-small" />
+          <img src={base + 'princesa1.png'} alt="Princesa" className="princess-img princess-img-small" />
         </div>
       </section>
 

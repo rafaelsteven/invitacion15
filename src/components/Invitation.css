@@ -117,15 +117,25 @@
 .hs-15 { top: 92%; left: 30%;  animation-delay: 0.7s;  }
 
 .princess-left {
-  position: absolute; bottom: 0; left: -8px;
+  position: absolute; bottom: 0; left: 0;
   pointer-events: none; z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 .princess-img {
-  width: 210px;
+  width: 240px;
   height: auto;
   display: block;
   mix-blend-mode: multiply;
-  opacity: 0.92;
+  opacity: 0.88;
+}
+
+@media (min-width: 480px) {
+  .princess-img { width: 320px; }
+}
+@media (min-width: 768px) {
+  .princess-img { width: 380px; }
 }
 .princess-img-small {
   width: 150px;
@@ -142,8 +152,9 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 135px 44px 24px;
+  padding: 135px 44px 40px;
   z-index: 2;
+  position: relative;
   text-align: center;
 }
 
@@ -258,6 +269,8 @@
   font-size: var(--t-script-lg);
   font-weight: 400;
   color: #fff;
+  position: relative;
+  z-index: 3;
   line-height: 1.05;
   margin: 0;
   text-shadow:
@@ -870,7 +883,7 @@ button.green-btn {
 
 /* Small phones */
 @media (max-width: 400px) {
-  .hero-inner               { padding: 105px 22px 18px; gap: 16px; }
+  .hero-inner               { padding: 105px 22px 30px; gap: 16px; }
   .date-section,
   .dresscode-section,
   .confirm-section          { padding: 42px 18px; }
@@ -890,7 +903,7 @@ button.green-btn {
       0 32px 90px rgba(0,0,0,0.65),
       0 0 140px rgba(80,20,180,0.28);
   }
-  .hero-inner       { padding: 155px 60px 36px; gap: 24px; }
+  .hero-inner       { padding: 155px 60px 40px; gap: 24px; }
   .crown-svg        { width: 110px; }
   .music-btn        { width: 58px; height: 58px; font-size: 1.3rem; }
   .quote-text       { font-size: 1.12rem; max-width: 330px; }
@@ -913,7 +926,7 @@ button.green-btn {
   .invitation {
     max-width: 600px;
   }
-  .hero-inner   { padding: 170px 72px 44px; }
+  .hero-inner   { padding: 170px 72px 50px; }
   .crown-svg    { width: 120px; }
   .quote-text   { font-size: 1.15rem; max-width: 360px; }
 }

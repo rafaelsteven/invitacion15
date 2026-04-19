@@ -20,6 +20,10 @@ export const CONFIG = {
   direccion:    'Av. Cualquiera 123 - Distrito',
   mapsUrl:      'https://maps.google.com',
 
+  // Dress code
+  dressCode:       'Sport elegante',
+  dressCodeNota:   'Les pedimos asistir elegantes para hacer de esta noche algo especial.',
+
   // Confirmación
   fechaLimite:  '20 de abril',
 
