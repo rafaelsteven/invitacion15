@@ -10,6 +10,16 @@
   position: relative;
   animation: invitationReveal 1s cubic-bezier(.22,1,.36,1) both;
   overflow: hidden;
+  user-select: none;
+  cursor: default;
+}
+
+.invitation p,
+.invitation h1,
+.invitation h2,
+.invitation span,
+.invitation div {
+  cursor: default;
 }
 
 @keyframes invitationReveal {

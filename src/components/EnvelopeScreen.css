@@ -4,6 +4,8 @@
   inset: 0;
   width: 100%;
   height: 100svh;
+  user-select: none;
+  cursor: default;
   /*
    * Jewel-tone purple gradient:
    * – Radial glow at center creates a luminous focal point

@@ -157,7 +157,7 @@ export default function Invitation({ family }) {
 
         {/* Rapunzel figure left */}
         <div className="princess-left">
-          <img src="/princesa1.png" alt="Princesa" className="princess-img" />
+          <img src="img/princesa1.png" alt="Princesa" className="princess-img" />
         </div>
 
         {/* Golden branch right */}
@@ -223,31 +223,12 @@ export default function Invitation({ family }) {
             <span className="photo-flower pf-4">✾</span>
           </div>
 
-          {/* Photo circle — click to upload */}
-          <div className="photo-circle" onClick={() => fileRef.current?.click()}>
-            {photo ? (
-              <img src={photo} alt="Quinceañera" />
-            ) : (
-              <div className="photo-placeholder">
-                <span className="photo-placeholder-icon">👸</span>
-                <span className="photo-placeholder-text">
-                  Toca para agregar<br />tu foto
-                </span>
-              </div>
-            )}
+          <div className="photo-circle">
+            <img src="img/foto_cumple.jpg" alt={CONFIG.quinceañera} />
           </div>
-
-          <input
-            ref={fileRef}
-            type="file"
-            accept="image/*"
-            className="photo-input"
-            onChange={handlePhotoChange}
-          />
         </div>
 
         <p className="photo-name-tag script">{CONFIG.quinceañera}</p>
-        {!photo && <p className="photo-upload-hint">Sube tu foto favorita ✦</p>}
       </section>
 
       {/* ===== DATE SECTION ===== */}
@@ -327,7 +308,7 @@ export default function Invitation({ family }) {
         </div>
 
         <div className="princess-right-small">
-          <img src="/princesa1.png" alt="Princesa" className="princess-img princess-img-small" />
+          <img src="img/princesa1.png" alt="Princesa" className="princess-img princess-img-small" />
         </div>
       </section>
 
