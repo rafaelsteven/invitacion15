@@ -286,7 +286,7 @@ export default function Invitation({ family }) {
           <p className="inv-dresscode-val script">{CONFIG.dressCode}</p>
           {CONFIG.dressCodeNota && <p className="inv-dresscode-note">{CONFIG.dressCodeNota}</p>}
           <div className="inv-dresscode-colors">
-            <p className="inv-dresscode-colors-title">Nos reservamos los tonos</p>
+            <p className="inv-dresscode-colors-title">Para mantener la armonía de colores de la noche, les pedimos evitar el color</p>
             <div className="inv-dresscode-swatches">
               <span className="inv-swatch inv-swatch-lila">
                 <span className="inv-swatch-dot" />
@@ -308,11 +308,6 @@ export default function Invitation({ family }) {
         <div className="inv-inner">
           <p className="inv-sec-title">MESA DE REGALOS</p>
           <p className="inv-gifts-text">{CONFIG.regaloTexto}</p>
-          {CONFIG.vapeUrl && (
-            <a className="inv-btn-outline" href={CONFIG.vapeUrl} target="_blank" rel="noopener noreferrer">
-              Ver lista de regalos
-            </a>
-          )}
         </div>
       </section>
 

@@ -34,7 +34,7 @@ export default function ConfirmModal({ family, onClose }) {
         </div>
 
         <p className="modal-subtitle">
-          Por favor haznos saber si podrás acompañar a {CONFIG.quinceañera} en su día especial.
+          Más que una fiesta, esta noche es un recuerdo que quiero guardar para siempre.
         </p>
 
         <div className="modal-buttons">

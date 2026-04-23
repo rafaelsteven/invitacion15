@@ -39,7 +39,7 @@ export const CONFIG = {
   dressCodeNota:   'Les pedimos asistir elegantes para hacer de esta noche algo especial.',
 
   // Regalos
-  regaloTexto: 'Tu presencia es el mejor regalo que me puedes dar en este día tan especial, pero si deseas obsequiarme algo, también puedes hacerlo a través de nuestra lista de regalos.',
+  regaloTexto: 'Nada me hará más feliz que celebrar este momento junto a ti. Si deseás acompañarme con un regalo, agradeceré tu aporte en un sobre durante la fiesta.',
   vapeUrl:     '',
 
   // Confirmación
