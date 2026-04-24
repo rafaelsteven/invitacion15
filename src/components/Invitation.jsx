@@ -294,7 +294,7 @@ export default function Invitation({ family }) {
               </span>
               <span className="inv-swatch inv-swatch-jade">
                 <span className="inv-swatch-dot" />
-                Verde Jade
+                Verde
               </span>
             </div>
           </div>

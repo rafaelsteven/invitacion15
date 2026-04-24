@@ -1,17 +1,44 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import EnvelopeScreen from './components/EnvelopeScreen'
 import Invitation from './components/Invitation'
+import MusicPlayer from './components/MusicPlayer'
 import { useFamilyData } from './hooks/useFamilyData'
 import './App.css'
 
+const base = import.meta.env.BASE_URL
+
 function InvitationFlow() {
   const [phase, setPhase] = useState('envelope')
+  const [musicPlaying, setMusicPlaying] = useState(false)
+  const audioRef = useRef(null)
   const { family, loading, error } = useFamilyData()
+
+  useEffect(() => {
+    const audio = new Audio(base + 'musica.mp3')
+    audio.loop = true
+    audio.volume = 0.7
+    audioRef.current = audio
+    return () => { audio.pause(); audio.src = '' }
+  }, [])
 
   const handleOpen = () => {
     setPhase('opening')
+    audioRef.current?.play().catch(() => {})
+    setMusicPlaying(true)
     setTimeout(() => setPhase('invitation'), 2000)
+  }
+
+  const handleToggleMusic = () => {
+    const audio = audioRef.current
+    if (!audio) return
+    if (musicPlaying) {
+      audio.pause()
+      setMusicPlaying(false)
+    } else {
+      audio.play().catch(() => {})
+      setMusicPlaying(true)
+    }
   }
 
   if (loading) {
@@ -48,6 +75,9 @@ function InvitationFlow() {
         <EnvelopeScreen onOpen={handleOpen} isOpening={phase === 'opening'} family={family} />
       )}
       {phase === 'invitation' && <Invitation family={family} />}
+      {phase !== 'envelope' && (
+        <MusicPlayer audioRef={audioRef} playing={musicPlaying} onToggle={handleToggleMusic} />
+      )}
     </div>
   )
 }
