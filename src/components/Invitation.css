@@ -418,23 +418,18 @@
 
 .inv-date-box {
   display: flex;
-  align-items: center;
-  gap: 18px;
+  justify-content: center;
   background: var(--blue-pale);
   border-radius: 14px;
-  padding: 16px 24px;
+  padding: 20px 40px;
   border: 1px solid rgba(138,106,192,0.2);
-}
-
-.inv-date-icon {
-  font-size: 1.8rem;
-  line-height: 1;
 }
 
 .inv-date-parts {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  align-items: center;
+  gap: 0;
 }
 
 .inv-date-diasemana {
@@ -442,6 +437,7 @@
   font-size: 0.65rem;
   letter-spacing: 0.3em;
   color: var(--text-soft);
+  margin-bottom: 8px;
 }
 
 .inv-date-num {
@@ -450,6 +446,7 @@
   font-weight: 700;
   color: var(--navy);
   line-height: 1;
+  margin-bottom: 5px;
 }
 
 .inv-date-mes {
@@ -457,6 +454,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.28em;
   color: var(--text-mid);
+  margin-bottom: 3px;
 }
 
 .inv-date-year {
