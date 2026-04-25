@@ -72,7 +72,7 @@ export default function MusicPlayer({ audioRef, playing, onToggle }) {
 
       {/* Centro: título + barra */}
       <div className="music-center">
-        <p className="music-song-title">♪ Música de Fondo</p>
+        <p className="music-song-title">♪ Taylor Swift - Daylight</p>
         <div className="music-progress-row">
           <span className="music-time">{fmt(currentTime)}</span>
           <div className="music-slider-wrap">

@@ -249,7 +249,6 @@ export default function Invitation({ family }) {
         <BlueFloral cls="bf-br" />
         <div className="inv-inner">
           <div className="inv-date-box">
-            <span className="inv-date-icon">📅</span>
             <div className="inv-date-parts">
               <span className="inv-date-diasemana">{CONFIG.diaSemana}</span>
               <span className="inv-date-num">{CONFIG.dia}</span>

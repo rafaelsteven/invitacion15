@@ -35,15 +35,15 @@ export const CONFIG = {
   ],
 
   // Dress code
-  dressCode:       'Elegante',
-  dressCodeNota:   'Les pedimos asistir elegantes para hacer de esta noche algo especial.',
+  dressCode:       'Formal',
+  dressCodeNota:   'Les pedimos asistir Formal para hacer de esta noche algo especial.',
 
   // Regalos
   regaloTexto: 'Nada me hará más feliz que celebrar este momento junto a ti. Si deseás acompañarme con un regalo, agradeceré tu aporte en un sobre durante la fiesta.',
   vapeUrl:     '',
 
   // Confirmación
-  fechaLimite:  '01 de junio',
+  fechaLimite:  '08 de junio',
 
   // Frase de la quinceañera
   frase: 'Hay momentos en la vida que representan un antes y un después. El comienzo y el fin de una etapa, y lo que los hace realmente especial son las personas con las que se comparten. Quiero que tú seas una de ellas.',
