@@ -35,8 +35,8 @@ export const CONFIG = {
   ],
 
   // Dress code
-  dressCode:       'Elegante',
-  dressCodeNota:   'Les pedimos asistir elegantes para hacer de esta noche algo especial.',
+  dressCode:       'Formal',
+  dressCodeNota:   'Les pedimos asistir Formal para hacer de esta noche algo especial.',
 
   // Regalos
   regaloTexto: 'Nada me hará más feliz que celebrar este momento junto a ti. Si deseás acompañarme con un regalo, agradeceré tu aporte en un sobre durante la fiesta.',
