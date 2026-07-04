@@ -4,7 +4,7 @@ import './MusicPlayer.css'
 export default function MusicPlayer({ audioRef, playing, onToggle }) {
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
-  const [volume, setVolume] = useState(0.7)
+  const [volume, setVolume] = useState(0.3)
   const [showVol, setShowVol] = useState(false)
   const [dragging, setDragging] = useState(false)
   const volRef = useRef(null)
@@ -72,7 +72,7 @@ export default function MusicPlayer({ audioRef, playing, onToggle }) {
 
       {/* Centro: título + barra */}
       <div className="music-center">
-        <p className="music-song-title">♪ Taylor Swift - Daylight</p>
+        <p className="music-song-title">♪ HA-ASH - Cree y atrévete</p>
         <div className="music-progress-row">
           <span className="music-time">{fmt(currentTime)}</span>
           <div className="music-slider-wrap">

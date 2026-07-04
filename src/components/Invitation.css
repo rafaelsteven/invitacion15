@@ -3,14 +3,14 @@
    ============================================================ */
 
 :root {
-  --navy:       #3a1f62;
+  --navy:       #CB80FF;
   --blue:       #7a50b0;
   --blue-mid:   #8f68c0;
   --blue-light: #b090d8;
   --blue-pale:  #f0e8ff;
   --blue-bg:    #f7f3ff;
-  --ink:        #3a1f62;
-  --text-mid:   #4a2878;
+  --ink:        #bd90ff;
+  --text-mid:   #9543ff;
   --text-soft:  #6a4890;
 }
 
@@ -127,7 +127,7 @@
 }
 
 .inv-hero-crown {
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: #d4af6a;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.45));
   line-height: 1;
@@ -135,10 +135,11 @@
 
 .inv-hero-mis15 {
   font-family: var(--caps);
-  font-size: 0.78rem;
-  font-weight: 500;
+  font-size: 1.5cap;
+  font-weight: 900;
+  -webkit-text-stroke: 0.02rem #ffffff;
   letter-spacing: 0.55em;
-  color: #fff;
+  color: #f8f8f8;
   text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 

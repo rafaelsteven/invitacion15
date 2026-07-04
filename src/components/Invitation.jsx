@@ -264,16 +264,20 @@ export default function Invitation({ family }) {
             <p className="inv-venue-title">RECEPCIÓN</p>
           </div>
           <p className="inv-venue-name">{CONFIG.salon}</p>
-          <p className="inv-venue-addr">{CONFIG.direccion}</p>
+          {CONFIG.direccion?.trim() ? (
+            <p className="inv-venue-addr">{CONFIG.direccion}</p>
+           ): null}
           <p className="inv-venue-hora">🕗 {CONFIG.hora}</p>
-          <a className="inv-btn-solid" href={CONFIG.mapsUrl} target="_blank" rel="noopener noreferrer">
-            📍 VER UBICACIÓN
-          </a>
+          {CONFIG.mapsUrl?.trim() ? (
+            <a className="inv-btn-solid" href={CONFIG.mapsUrl} target="_blank" rel="noopener noreferrer">
+              📍 VER UBICACIÓN
+            </a>
+          ) : null}
         </div>
       </section>
 
       {/* ── MOMENTOS DE LA NOCHE ──────────────────────────────────── */}
-      <MomentsSection />
+      {/* <MomentsSection /> */}
 
       {/* ── DRESS CODE ────────────────────────────────────────────── */}
       <section className="inv-dresscode-sec">
@@ -290,10 +294,6 @@ export default function Invitation({ family }) {
               <span className="inv-swatch inv-swatch-lila">
                 <span className="inv-swatch-dot" />
                 Lila
-              </span>
-              <span className="inv-swatch inv-swatch-jade">
-                <span className="inv-swatch-dot" />
-                Verde
               </span>
             </div>
           </div>
@@ -324,8 +324,7 @@ export default function Invitation({ family }) {
           )}
           <p className="inv-confirm-text">
             Sin ti este momento no sería igual. Agradecemos tu confirmación pero
-            también entendemos si por alguna razón no puedes asistir. Por favor
-            confírmanos antes del <strong>{CONFIG.fechaLimite}</strong>.
+            también entendemos si por alguna razón no puedes asistir.
           </p>
           <button
             className="inv-btn-solid"
