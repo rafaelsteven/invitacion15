@@ -128,39 +128,6 @@ function calendarUrl(isoDate, title, location) {
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${start}/${end}&location=${encodeURIComponent(location)}`
 }
 
-// ─── Moments of the night ─────────────────────────────────────────────────────
-const MOMENTS = [
-  { icon: '👸', label: 'Recepción'      },
-  { icon: '🏰', label: 'Ceremonia'      },
-  { icon: '🍽️', label: 'Cena'           },
-  { icon: '💃', label: 'Baile Sorpresa' },
-  { icon: '🎊', label: 'Hora Loca'      },
-  { icon: '🎵', label: 'Show Orquesta'  },
-]
-
-function MomentsSection() {
-  const [ref, visible] = useInView()
-  return (
-    <section className="inv-moments-sec" ref={ref}>
-      <div className="inv-inner">
-        <p className="inv-sec-title">ESA NOCHE VIVIRÁS</p>
-        <p className="inv-moments-sub script">momentos que no olvidarás</p>
-        <div className="inv-moments-grid">
-          {MOMENTS.map((m, i) => (
-            <div
-              key={i}
-              className={`inv-moment-card ${visible ? 'inv-moment-visible' : ''}`}
-              style={{ '--delay': `${i * 0.1}s` }}
-            >
-              <span className="inv-moment-icon">{m.icon}</span>
-              <span className="inv-moment-label">{m.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
 
 // ─── Main component ───────────────────────────────────────────────────────────
 export default function Invitation({ family }) {
@@ -277,7 +244,7 @@ export default function Invitation({ family }) {
       </section>
 
       {/* ── MOMENTOS DE LA NOCHE ──────────────────────────────────── */}
-      {/* <MomentsSection /> */}
+
 
       {/* ── DRESS CODE ────────────────────────────────────────────── */}
       <section className="inv-dresscode-sec">
